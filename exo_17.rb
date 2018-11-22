@@ -1,15 +1,12 @@
-puts "Veuillez entrer votre année de naissance :"
-year = gets.chomp.to_i
-age = 0
-while (year <= 2017)
-  x = 2017 - year
-  if (x == age)
-    puts "Il y a " + x.to_s + " ans, tu avais la moitié de l'age que tu as aujourd'hui"
-    age = age + 1
-    year = year + 1;
+puts "Veuillez entrer votre age:"
+age = gets.chomp.to_i
+year = 0
+while (age >= 0)
+  if (year == age)
+    puts "Il y a " + year.to_s +  "ans, tu avais la moitié de l'age que tu as aujourd'hui"
   else
-    puts "Il y a " + x.to_s + " ans, tu avais " + age.to_s + " ans."
-    age = age + 1
-    year = year + 1;
+    puts "Il y a " + age.to_s + " ans, tu avais " + year.to_s + " ans."
   end
+  age = age - 1
+  year = year + 1;
 end
